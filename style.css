@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 500;
+  transition: background-color 0.7s ease, color 0.7s ease;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+body.dark a {
+  color: white;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Ranade", sans-serif;
+  font-weight: 400;
+  color: rgb(82, 80, 80);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  padding: 0 7%;
+  border-bottom: 1px solid black;
+}
+
+body.dark nav {
+  border-bottom: 1px solid rgb(58, 110, 253);
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+nav .logo img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+nav svg {
+  width: 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 60%;
+  justify-content: space-between;
+}
+
+nav ul li {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: rgb(20, 79, 240);
+  transition: width 0.3s ease;
+}
+
+ul li:hover::after {
+  width: 100%;
+}
+
+nav ul li a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: rgb(82, 80, 80);
+}
+
+nav ul li:hover {
+  color: rgb(14, 44, 126);
+  transform: scale(1.1);
+}
+
+/* togle-menu */
+nav .togle-menu {
+  display: none;
+}
+
+.togle-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  position: relative;
+  border-radius: 30px;
+  height: 24px;
+  border: 1px solid rgb(233, 228, 228);
+  cursor: pointer;
+}
+.togle-mode svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.togle-mode.active {
+  border: 1px solid rgb(20, 79, 240);
+}
+
+.togle-mode svg:nth-child(1) {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+}
+.togle-mode svg:nth-child(2) {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) rotate(-180deg) scale(0.5);
+}
+.togle-mode.active svg:nth-child(1) {
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) rotate(180deg) scale(0.5);
+}
+.togle-mode.active svg:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  color: white;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav .logo h1 span {
+  color: rgb(20, 79, 240) !important;
+}
