@@ -7,6 +7,7 @@ body {
   font-family: "Cabinet Grotesk", sans-serif;
   font-weight: 500;
   transition: background-color 0.7s ease, color 0.7s ease;
+  overflow-x: hidden;
 }
 
 .dark {
@@ -93,6 +94,15 @@ nav ul li:hover {
 }
 
 /* togle-menu */
+.tombol {
+  width: 100px;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: aqua; */
+}
+
 nav .togle-menu {
   display: none;
 }
@@ -101,11 +111,11 @@ nav .togle-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 55px;
+  width: 35px;
   position: relative;
   border-radius: 30px;
-  height: 24px;
-  border: 1px solid rgb(233, 228, 228);
+  height: 35px;
+  border: 2px solid rgb(233, 228, 228);
   cursor: pointer;
 }
 .togle-mode svg {
@@ -143,6 +153,73 @@ nav .togle-menu {
   visibility: visible;
 }
 
+.togle-mode.ubah svg:nth-child(1) {
+  color: white;
+}
+
 nav .logo h1 span {
   color: rgb(20, 79, 240) !important;
+}
+
+/* responsif */
+/* laptop */
+@media screen and (max-width: 1200px) {
+}
+/* tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    opacity: 0;
+    right: 0;
+    transform: translateX(100%);
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: rgba(0, 0, 255, 0.521);
+  }
+
+  nav ul li a {
+    font-size: 1.1rem;
+    color: white;
+  }
+
+  nav .togle-menu {
+    display: flex;
+    height: 19px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  nav .togle-menu span {
+    width: 28px;
+    height: 2px;
+    background-color: blue;
+  }
+
+  nav .togle-menu.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: white;
+  }
+  nav .togle-menu.active span:nth-child(2) {
+    transform: scale(0);
+    opacity: 0;
+  }
+  nav .togle-menu.active span:nth-child(3) {
+    background-color: white;
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  nav ul.slide {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* mobile */
+@media screen and (max-width: 550px) {
+  nav ul {
+    background-color: rgb(97, 97, 255);
+    width: 80%;
+  }
 }
