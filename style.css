@@ -1,6 +1,13 @@
 * {
   margin: 0;
   padding: 0;
+  outline: 1px solid red;
+}
+
+html,
+body,
+main {
+  overflow-x: hidden;
 }
 
 body {
@@ -114,9 +121,14 @@ nav .togle-menu {
   position: relative;
   border-radius: 30px;
   height: 35px;
-  border: 2px solid rgb(233, 228, 228);
+  border: 1px solid rgb(0, 0, 0);
   cursor: pointer;
 }
+
+.togle-mode.ubah {
+  border: 2px solid rgb(31, 64, 255);
+}
+
 .togle-mode svg {
   position: absolute;
   top: 50%;
@@ -228,7 +240,7 @@ nav .logo h1 span {
 @media screen and (max-width: 550px) {
   nav ul {
     background-color: rgb(97, 97, 255);
-    width: 80%;
+    width: 94%;
   }
 
   nav .logo h1 {
