@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -186,7 +187,7 @@ nav .logo h1 span {
 /* tablet ==================*/
 @media screen and (max-width: 768px) {
   nav ul {
-    position: absolute;
+    position: fixed;
     width: 60%;
     height: 100vh;
     top: 0;
