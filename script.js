@@ -2,6 +2,7 @@ const togleMode = document.querySelector(".togle-mode");
 const sun = togleMode.querySelector("svg:nth-child(1)");
 const moon = togleMode.querySelector("svg:nth-child(2)");
 const beranda = document.querySelector(".container1");
+const ul = document.querySelector("nav ul");
 
 function updateMenu(jikaActive) {
   if (jikaActive) {
@@ -20,10 +21,10 @@ togleMode.addEventListener("click", (e) => {
   togleMode.classList.toggle("active");
   document.body.classList.toggle("dark");
   beranda.classList.toggle("dark");
+  ul.classList.toggle("dark");
 });
 
 const toggleMenu = document.querySelector(".togle-menu");
-const ul = document.querySelector("nav ul");
 toggleMenu.addEventListener("click", (e) => {
   e.stopPropagation();
   const jikaActive = !ul.classList.contains("slide");
