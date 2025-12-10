@@ -100,7 +100,6 @@ nav ul li:hover {
   height: 40px;
   align-items: center;
   justify-content: space-around;
-  /* background-color: aqua; */
 }
 
 nav .togle-menu {
@@ -148,7 +147,7 @@ nav .togle-menu {
 }
 .togle-mode.active svg:nth-child(2) {
   transform: translate(-50%, -50%) rotate(0deg) scale(1);
-  color: white;
+  color: rgb(28, 32, 245);
   opacity: 1;
   visibility: visible;
 }
@@ -164,6 +163,9 @@ nav .logo h1 span {
 /* responsif */
 /* laptop */
 @media screen and (max-width: 1200px) {
+  nav .logo h1 {
+    font-weight: 700;
+  }
 }
 /* tablet */
 @media screen and (max-width: 768px) {
@@ -178,7 +180,11 @@ nav .logo h1 span {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    background-color: rgba(0, 0, 255, 0.521);
+    background-color: rgb(65, 65, 255);
+    transition: transform 0.7s ease, opacity 0.7s ease;
+  }
+  nav .logo h1 {
+    font-weight: 700;
   }
 
   nav ul li a {
@@ -191,11 +197,13 @@ nav .logo h1 span {
     height: 19px;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
   }
   nav .togle-menu span {
     width: 28px;
     height: 2px;
     background-color: blue;
+    transition: transform 0.7s ease;
   }
 
   nav .togle-menu.active span:nth-child(1) {
@@ -221,5 +229,17 @@ nav .logo h1 span {
   nav ul {
     background-color: rgb(97, 97, 255);
     width: 80%;
+  }
+
+  nav .logo h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+/* mobile mini */
+@media screen and (max-width: 300px) {
+  nav ul {
+    width: 65%;
   }
 }
