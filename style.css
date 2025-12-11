@@ -40,7 +40,7 @@ nav {
   height: 70px;
   z-index: 10;
   align-items: center;
-  padding: 0 7%;
+  padding: 0 10%;
   border-bottom: 1px solid black;
   overflow-x: hidden;
   position: fixed;
@@ -48,7 +48,13 @@ nav {
   right: 0;
   top: 0;
   background-color: beige;
-  transition: background-color 0.7s ease;
+  /* transition: background-color 0.7s ease; */
+  transition: all 0.3s ease;
+}
+
+nav.scrolled {
+  padding: 0 7%;
+  transition: 0.3s ease;
 }
 
 body.dark nav {

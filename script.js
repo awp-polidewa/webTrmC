@@ -3,6 +3,15 @@ const sun = togleMode.querySelector("svg:nth-child(1)");
 const moon = togleMode.querySelector("svg:nth-child(2)");
 const beranda = document.querySelector(".container1");
 const ul = document.querySelector("nav ul");
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", function () {
+  if (this.window.scrollY > 10) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
 
 function updateMenu(jikaActive) {
   if (jikaActive) {
