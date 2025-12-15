@@ -200,12 +200,8 @@ nav .logo h1 span {
   justify-content: center;
   align-items: center;
   transition: background-color 0.7s ease;
-  background: linear-gradient(
-    to bottom,
-    rgb(0, 38, 255) 0%,
-    rgb(3, 24, 161) 60%
-  );
-  color: white;
+  background-color: white;
+  color: rgb(29, 26, 26);
 }
 
 .container1.dark {
@@ -214,7 +210,7 @@ nav .logo h1 span {
 
 .container1 h2 {
   font-size: 3rem;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .wrapper {
@@ -241,6 +237,58 @@ nav .logo h1 span {
   color: rgb(255, 255, 255);
 }
 
+/* Tentang Kami */
+#tentang-kami {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+#tentang-kami h2 {
+  font-size: 3rem;
+  color: black;
+}
+
+#tentang-kami .content1 {
+  width: 600px;
+  height: 390px;
+  display: flex;
+  justify-content: center;
+}
+
+#tentang-kami .content1 img {
+  width: 500px;
+  border-radius: 10px;
+}
+
+/* content2 */
+#tentang-kami .content2 {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: aqua;
+}
+
+/* .nama {
+  font-family: sans-serif;
+  font-size: 50px;
+}
+
+.nama span {
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.nama span:hover {
+  transform: scale(2) translateY(-10px);
+} */
+
 /*============================== responsif ======================= */
 /* laptop */
 @media screen and (max-width: 1200px) {
@@ -260,32 +308,28 @@ nav .logo h1 span {
   /* beranda */
   .container1 {
     align-items: center;
-    background: linear-gradient(
-      to bottom,
-      rgb(0, 38, 255) 0%,
-      rgb(3, 24, 161) 60%
-    );
-    color: white;
+
+    color: rgb(0, 0, 0);
   }
 
   .container1.dark {
     background: black;
   }
 
-  .container1.dark h2 span {
+  /* .container1.dark h2 span {
     filter: drop-shadow(0 0 10px rgba(3, 243, 203, 0.5));
     background: linear-gradient(to right, rgb(4, 59, 241), #3f82ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
+  } */
 
   .container1.dark h2 {
     color: rgb(107, 105, 105);
   }
 
   .container1 h2 {
-    color: white;
-    font-size: 3rem;
+    font-size: 4rem;
+    margin-bottom: 3rem;
   }
 
   .container1 h2 span {
@@ -319,12 +363,11 @@ nav .logo h1 span {
     text-align: center;
     line-height: 22px;
     height: 22px;
-    background-color: beige;
     border-radius: 5px;
-    color: black;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     font-size: 1.1rem;
-    background-color: rgb(252, 212, 82);
+    background-color: rgb(0, 58, 248);
   }
 
   .container1.dark .plLanjut {
@@ -399,12 +442,7 @@ nav .logo h1 span {
   /* beranda */
   .container1 {
     align-items: center;
-    background: linear-gradient(
-      to bottom,
-      rgb(0, 38, 255) 0%,
-      rgb(3, 24, 161) 60%
-    );
-    color: white;
+    background-color: white;
   }
 
   .container1.dark {
@@ -418,21 +456,9 @@ nav .logo h1 span {
     -webkit-text-fill-color: transparent;
   }
 
-  .container1.dark h2 {
-    color: rgb(107, 105, 105);
-  }
-
   .container1 h2 {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 3rem;
-  }
-
-  .container1 h2 span {
-    /* background: linear-gradient(to right, rgb(196, 140, 36), #ffe819); */
-    background-color: rgb(150, 150, 150);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 10px rgba(3, 243, 203, 0.5));
   }
 
   .wrapper {
@@ -470,11 +496,27 @@ nav .logo h1 span {
     background-color: rgb(31, 64, 255);
     color: white;
   }
+
+  /*==================== tentang kami ================ */
+  #tentang-kami {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #tentang-kami .content1 {
+    width: 300px;
+    height: 390px;
+  }
+
+  #tentang-kami .content1 img {
+    width: 400px;
+    height: 280px;
+  }
 }
 /* mobile ================================== */
 @media screen and (max-width: 550px) {
   nav ul {
-    background-color: rgb(97, 97, 255);
+    background-color: rgba(22, 22, 231, 1);
     width: 70%;
   }
 
@@ -486,12 +528,6 @@ nav .logo h1 span {
   /* beranda */
   .container1 {
     align-items: center;
-    background: linear-gradient(
-      to bottom,
-      rgb(0, 38, 255) 0%,
-      rgb(3, 24, 161) 60%
-    );
-    color: white;
   }
 
   .container1.dark {
@@ -500,7 +536,6 @@ nav .logo h1 span {
 
   .container1.dark h2 span {
     filter: drop-shadow(0 0 10px rgba(3, 243, 203, 0.5));
-    background: linear-gradient(to right, rgb(4, 59, 241), #3f82ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -510,17 +545,17 @@ nav .logo h1 span {
   }
 
   .container1 h2 {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 3rem;
   }
 
-  .container1 h2 span {
-    /* background: linear-gradient(to right, rgb(196, 140, 36), #ffe819); */
+  /* background: linear-gradient(to right, rgb(196, 140, 36), #ffe819); */
+  /* .container1 h2 span {
     background-color: rgb(150, 150, 150);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 10px rgba(3, 243, 203, 0.5));
-  }
+  } */
 
   .wrapper {
     width: 80%;
@@ -537,7 +572,7 @@ nav .logo h1 span {
   }
 
   .container1.dark .wrapper p {
-    color: rgb(214, 212, 212);
+    color: rgb(187, 185, 185);
   }
 
   .plLanjut {
@@ -556,6 +591,16 @@ nav .logo h1 span {
   .container1.dark .plLanjut {
     background-color: rgb(31, 64, 255);
     color: white;
+  }
+
+  /* tentang kami */
+  #tentang-kami h2,
+  h3 {
+    font-size: 2rem;
+  }
+
+  #tentang-kami .content1 {
+    width: 150px;
   }
 }
 

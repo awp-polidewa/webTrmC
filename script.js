@@ -45,3 +45,8 @@ document.addEventListener("click", (e) => {
     updateMenu(false);
   }
 });
+
+// const nama = document.querySelector(".nama");
+
+// const nama1 = [...nama.textContent].map((h) => `<span>${h}</span>`).join("");
+// nama.innerHTML = nama1;
